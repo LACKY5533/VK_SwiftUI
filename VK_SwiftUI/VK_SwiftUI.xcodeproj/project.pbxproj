@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871DA41F27B7C18600A66075 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871DA41E27B7C18600A66075 /* FriendsView.swift */; };
+		871DA42627B7C5EE00A66075 /* BuilderAvatarAndName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871DA42527B7C5EE00A66075 /* BuilderAvatarAndName.swift */; };
+		871DA42827B7C76900A66075 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871DA42727B7C76900A66075 /* ViewModifier.swift */; };
+		871DA42A27B7D14100A66075 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871DA42927B7D14100A66075 /* GroupsView.swift */; };
 		8741CE5E27B1442C00EF26BF /* VK_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8741CE5D27B1442C00EF26BF /* VK_SwiftUIApp.swift */; };
 		8741CE6027B1442C00EF26BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8741CE5F27B1442C00EF26BF /* ContentView.swift */; };
 		8741CE6227B1442D00EF26BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8741CE6127B1442D00EF26BF /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		871DA41E27B7C18600A66075 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		871DA42527B7C5EE00A66075 /* BuilderAvatarAndName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderAvatarAndName.swift; sourceTree = "<group>"; };
+		871DA42727B7C76900A66075 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		871DA42927B7D14100A66075 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
 		8741CE5A27B1442C00EF26BF /* VK_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8741CE5D27B1442C00EF26BF /* VK_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK_SwiftUIApp.swift; sourceTree = "<group>"; };
 		8741CE5F27B1442C00EF26BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +41,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		871DA41C27B7C10600A66075 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				871DA41E27B7C18600A66075 /* FriendsView.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		871DA41D27B7C10F00A66075 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				871DA42927B7D14100A66075 /* GroupsView.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		871DA42427B7C58800A66075 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				871DA42527B7C5EE00A66075 /* BuilderAvatarAndName.swift */,
+				871DA42727B7C76900A66075 /* ViewModifier.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		871DA42B27B7D55700A66075 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8741CE5F27B1442C00EF26BF /* ContentView.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
 		8741CE5127B1442C00EF26BF = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				8741CE5D27B1442C00EF26BF /* VK_SwiftUIApp.swift */,
-				8741CE5F27B1442C00EF26BF /* ContentView.swift */,
+				871DA42B27B7D55700A66075 /* LoginScreen */,
+				871DA42427B7C58800A66075 /* General */,
+				871DA41C27B7C10600A66075 /* Friends */,
+				871DA41D27B7C10F00A66075 /* Groups */,
 				8741CE6127B1442D00EF26BF /* Assets.xcassets */,
 				8741CE6627B1442D00EF26BF /* Info.plist */,
 				8741CE6327B1442D00EF26BF /* Preview Content */,
@@ -138,8 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871DA41F27B7C18600A66075 /* FriendsView.swift in Sources */,
+				871DA42827B7C76900A66075 /* ViewModifier.swift in Sources */,
 				8741CE6027B1442C00EF26BF /* ContentView.swift in Sources */,
 				8741CE5E27B1442C00EF26BF /* VK_SwiftUIApp.swift in Sources */,
+				871DA42A27B7D14100A66075 /* GroupsView.swift in Sources */,
+				871DA42627B7C5EE00A66075 /* BuilderAvatarAndName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
