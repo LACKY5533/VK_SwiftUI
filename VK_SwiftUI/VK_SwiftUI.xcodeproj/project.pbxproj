@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,9 +12,14 @@
 		871DA42827B7C76900A66075 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871DA42727B7C76900A66075 /* ViewModifier.swift */; };
 		871DA42A27B7D14100A66075 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871DA42927B7D14100A66075 /* GroupsView.swift */; };
 		8741CE5E27B1442C00EF26BF /* VK_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8741CE5D27B1442C00EF26BF /* VK_SwiftUIApp.swift */; };
-		8741CE6027B1442C00EF26BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8741CE5F27B1442C00EF26BF /* ContentView.swift */; };
+		8741CE6027B1442C00EF26BF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8741CE5F27B1442C00EF26BF /* LoginView.swift */; };
 		8741CE6227B1442D00EF26BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8741CE6127B1442D00EF26BF /* Assets.xcassets */; };
 		8741CE6527B1442D00EF26BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8741CE6427B1442D00EF26BF /* Preview Assets.xcassets */; };
+		8743C82327BD898F00B80517 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743C82227BD898F00B80517 /* MainTabBarView.swift */; };
+		8743C82527BD8CC100B80517 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743C82427BD8CC100B80517 /* NewsView.swift */; };
+		8743C82827BD91E200B80517 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743C82727BD91E200B80517 /* ContainerView.swift */; };
+		8743C82B27BD958900B80517 /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 8743C82A27BD958900B80517 /* ASCollectionView */; };
+		8743C82D27BD98F600B80517 /* FriendProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8743C82C27BD98F600B80517 /* FriendProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +29,14 @@
 		871DA42927B7D14100A66075 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
 		8741CE5A27B1442C00EF26BF /* VK_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8741CE5D27B1442C00EF26BF /* VK_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK_SwiftUIApp.swift; sourceTree = "<group>"; };
-		8741CE5F27B1442C00EF26BF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8741CE5F27B1442C00EF26BF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8741CE6127B1442D00EF26BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8741CE6427B1442D00EF26BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8741CE6627B1442D00EF26BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8743C82227BD898F00B80517 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
+		8743C82427BD8CC100B80517 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		8743C82727BD91E200B80517 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		8743C82C27BD98F600B80517 /* FriendProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8743C82B27BD958900B80517 /* ASCollectionView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				871DA41E27B7C18600A66075 /* FriendsView.swift */,
+				8743C82C27BD98F600B80517 /* FriendProfileView.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -69,7 +80,8 @@
 		871DA42B27B7D55700A66075 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				8741CE5F27B1442C00EF26BF /* ContentView.swift */,
+				8741CE5F27B1442C00EF26BF /* LoginView.swift */,
+				8743C82727BD91E200B80517 /* ContainerView.swift */,
 			);
 			path = LoginScreen;
 			sourceTree = "<group>";
@@ -96,8 +108,7 @@
 				8741CE5D27B1442C00EF26BF /* VK_SwiftUIApp.swift */,
 				871DA42B27B7D55700A66075 /* LoginScreen */,
 				871DA42427B7C58800A66075 /* General */,
-				871DA41C27B7C10600A66075 /* Friends */,
-				871DA41D27B7C10F00A66075 /* Groups */,
+				8743C82127BD895800B80517 /* Main */,
 				8741CE6127B1442D00EF26BF /* Assets.xcassets */,
 				8741CE6627B1442D00EF26BF /* Info.plist */,
 				8741CE6327B1442D00EF26BF /* Preview Content */,
@@ -111,6 +122,25 @@
 				8741CE6427B1442D00EF26BF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8743C82127BD895800B80517 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8743C82227BD898F00B80517 /* MainTabBarView.swift */,
+				8743C82627BD8CC600B80517 /* News */,
+				871DA41C27B7C10600A66075 /* Friends */,
+				871DA41D27B7C10F00A66075 /* Groups */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8743C82627BD8CC600B80517 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				8743C82427BD8CC100B80517 /* NewsView.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +159,9 @@
 			dependencies = (
 			);
 			name = VK_SwiftUI;
+			packageProductDependencies = (
+				8743C82A27BD958900B80517 /* ASCollectionView */,
+			);
 			productName = VK_SwiftUI;
 			productReference = 8741CE5A27B1442C00EF26BF /* VK_SwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -156,6 +189,9 @@
 				Base,
 			);
 			mainGroup = 8741CE5127B1442C00EF26BF;
+			packageReferences = (
+				8743C82927BD958900B80517 /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+			);
 			productRefGroup = 8741CE5B27B1442C00EF26BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,11 +219,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				871DA41F27B7C18600A66075 /* FriendsView.swift in Sources */,
+				8743C82527BD8CC100B80517 /* NewsView.swift in Sources */,
+				8743C82827BD91E200B80517 /* ContainerView.swift in Sources */,
 				871DA42827B7C76900A66075 /* ViewModifier.swift in Sources */,
-				8741CE6027B1442C00EF26BF /* ContentView.swift in Sources */,
+				8743C82327BD898F00B80517 /* MainTabBarView.swift in Sources */,
+				8741CE6027B1442C00EF26BF /* LoginView.swift in Sources */,
 				8741CE5E27B1442C00EF26BF /* VK_SwiftUIApp.swift in Sources */,
 				871DA42A27B7D14100A66075 /* GroupsView.swift in Sources */,
 				871DA42627B7C5EE00A66075 /* BuilderAvatarAndName.swift in Sources */,
+				8743C82D27BD98F600B80517 /* FriendProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +416,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8743C82927BD958900B80517 /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apptekstudios/ASCollectionView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8743C82A27BD958900B80517 /* ASCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8743C82927BD958900B80517 /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			productName = ASCollectionView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8741CE5227B1442C00EF26BF /* Project object */;
 }

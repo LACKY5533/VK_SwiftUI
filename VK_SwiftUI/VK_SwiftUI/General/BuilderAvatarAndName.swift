@@ -38,3 +38,20 @@ struct NameTextBuilder: View {
             .modifier(NameTextModifier(size: 20, design: . default, style: . regular))
     }
 }
+
+struct ImageWhenOpenInFriendProfile: View {
+    var content: Image
+
+    init(@ViewBuilder content: () -> Image) {
+        self.content = content()
+    }
+
+    var body: some View {
+        content
+            .resizable()
+            .frame(width: 100, height: 100)
+            .clipShape(Circle())
+            .overlay(Circle().stroke(Color.gray, lineWidth: 1))
+    }
+
+}

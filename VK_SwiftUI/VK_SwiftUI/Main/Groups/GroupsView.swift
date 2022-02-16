@@ -1,5 +1,5 @@
 //
-//  FriendsView.swift
+//  GroupsView.swift
 //  VK_SwiftUI
 //
 //  Created by LACKY on 12.02.2022.
@@ -7,16 +7,14 @@
 
 import SwiftUI
 
-struct FriendsView: View {
+struct GroupsView: View {
     var body: some View {
-        NavigationView {
-            RootFriendsView()
-                .navigationBarTitle(Text("Друзья"))
-        }
+            RootGroupsView()
+                .navigationBarTitle(Text("Группы"))
     }
 }
 
-struct RootFriendsView: View {
+struct RootGroupsView: View {
     var body: some View {
         ZStack {
             List(0..<3) {item in
@@ -25,7 +23,7 @@ struct RootFriendsView: View {
                         Image("Avatar")
                     }
                     NameTextBuilder {
-                        Text("имя")
+                        Text("название группы")
                     }
                 }.listRowBackground(Color.clear)
             }.background(Color(.blue))
@@ -34,8 +32,9 @@ struct RootFriendsView: View {
     }
 }
 
-struct FriendsView_Previews: PreviewProvider {
+
+struct GroupsView_Previews: PreviewProvider {
     static var previews: some View {
-        FriendsView()
+        GroupsView()
     }
 }

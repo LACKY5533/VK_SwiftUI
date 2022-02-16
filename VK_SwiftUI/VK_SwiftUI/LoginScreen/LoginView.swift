@@ -8,11 +8,15 @@
 import SwiftUI
 import Combine
 
-struct ContentView: View {
+struct LoginView: View {
     
-    @State private var login = ""
-    @State private var password = ""
+    @State private var login = "admin"
+    @State private var password = "admin"
     @State private var shouldShowLogo: Bool = true
+    
+    @Binding var isUserLoggedIn: Bool
+    
+    @State private var showIncorrentCredentialsWarning = false
     
     private let keyboardIsOnPublisher = Publishers.Merge(
         NotificationCenter
@@ -24,7 +28,7 @@ struct ContentView: View {
             .default
             .publisher(for: UIResponder.keyboardWillHideNotification)
             .map { _ in false}
-    )
+    ).removeDuplicates()
     
     var body: some View {
         
@@ -61,9 +65,7 @@ struct ContentView: View {
                     
                     Spacer(minLength: 30)
                     
-                    Button {
-                        print("вход")
-                    } label: {
+                    Button (action: verifyLoginData) {
                         Text("Войти")
                             .frame(width: 250, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     }.disabled(login.isEmpty || password.isEmpty)
@@ -78,21 +80,26 @@ struct ContentView: View {
             }
         }.onTapGesture {
             UIApplication.shared.endEditing()
+        }.alert(isPresented: $showIncorrentCredentialsWarning) {
+            Alert(title: Text("Ошибка!"),
+                  message: Text("Логин или пароль введены неправильно"))
         }
     }
+    
+    private func verifyLoginData() {
+        if login == "admin" && password == "admin" {
+            isUserLoggedIn = true
+        } else {
+            password = ""
+        }
+    }
+    
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+
 
 extension UIApplication {
     func endEditing() {
-        sendAction(#selector(UIResponder.resignFirstResponder),
-                   to: nil,
-                   from: nil,
-                   for: nil)
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
