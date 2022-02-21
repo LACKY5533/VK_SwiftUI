@@ -9,22 +9,16 @@ import SwiftUI
 
 struct ContainerView: View {
     
-    @State private var shouldShowMainView: Bool = false
+    @State private var shouldShowMainView: Bool = true
     
     var body: some View {
         NavigationView {
             HStack {
-                LoginView(isUserLoggedIn: $shouldShowMainView)
+                VKAuthWebView()
                 NavigationLink (
                     destination: MainTabBarView(),
                     isActive: $shouldShowMainView){}
             }
         }
-    }
-}
-
-struct ContainerView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContainerView()
     }
 }

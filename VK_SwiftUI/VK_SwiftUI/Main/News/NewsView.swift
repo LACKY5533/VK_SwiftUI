@@ -7,28 +7,23 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct NewsView: View {
-    var body: some View {
-            RootNewsView()
-                .navigationBarTitle(Text("Новости"))
+    
+    @ObservedObject var viewModel: NewsViewModel
+    
+    init(viewModel: NewsViewModel) {
+        self.viewModel = viewModel
     }
-}
-
-struct RootNewsView: View {
+    
     var body: some View {
-        ZStack {
-            List(0..<3) {item in
-                HStack {
-                    
-                }.listRowBackground(Color.clear)
-            }.background(Color(.blue))
-        
-        }
-    }
-}
-
-struct NewsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewsView()
+         
+        List(viewModel.newsItems) { news in
+                
+            NewsViewCell(newsItem: news)
+                
+            
+        }.onAppear(perform: viewModel.fetchNews)
     }
 }

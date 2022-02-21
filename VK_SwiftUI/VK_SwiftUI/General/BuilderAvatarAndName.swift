@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct AvatarBuilder: View {
     
-    private var content: Image
+    private var content: KFImage
     
-    init(@ViewBuilder content: () -> Image) {
+    init(@ViewBuilder content: () -> KFImage) {
         self.content = content()
     }
     
@@ -40,9 +41,9 @@ struct NameTextBuilder: View {
 }
 
 struct ImageWhenOpenInFriendProfile: View {
-    var content: Image
+    var content: KFImage
 
-    init(@ViewBuilder content: () -> Image) {
+    init(@ViewBuilder content: () -> KFImage) {
         self.content = content()
     }
 

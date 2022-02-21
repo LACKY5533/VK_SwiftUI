@@ -8,33 +8,18 @@
 import SwiftUI
 
 struct GroupsView: View {
-    var body: some View {
-            RootGroupsView()
-                .navigationBarTitle(Text("Группы"))
+    
+    @ObservedObject var viewModel: GroupsViewModel
+    
+    init(viewModel: GroupsViewModel) {
+        self.viewModel = viewModel
     }
-}
-
-struct RootGroupsView: View {
+    
     var body: some View {
-        ZStack {
-            List(0..<3) {item in
-                HStack {
-                    AvatarBuilder {
-                        Image("Avatar")
-                    }
-                    NameTextBuilder {
-                        Text("название группы")
-                    }
-                }.listRowBackground(Color.clear)
-            }.background(Color(.blue))
-        
-        }
-    }
-}
-
-
-struct GroupsView_Previews: PreviewProvider {
-    static var previews: some View {
-        GroupsView()
+            
+        List(viewModel.groups) { group in
+            GroupCell(group: group)
+        }.onAppear(perform: viewModel.fetchGroups)
+//        .navigationBarTitle("Группы", displayMode: .inline)
     }
 }

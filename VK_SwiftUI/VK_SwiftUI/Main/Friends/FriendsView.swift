@@ -8,36 +8,22 @@
 import SwiftUI
 
 struct FriendsView: View {
-    var body: some View {
-            RootFriendsView()
-                .navigationBarTitle(Text("Друзья"))
+    
+    @ObservedObject var viewModel: FriendsViewModel
+    
+    init(viewModel: FriendsViewModel) {
+        self.viewModel = viewModel
     }
-}
-
-struct RootFriendsView: View {
+    
     var body: some View {
-        ZStack {
-            List(0..<3) {item in
-                NavigationLink (
-                    destination: FriendProfileView(),
-                    label: {
-                        HStack {
-                            AvatarBuilder {
-                                Image("Avatar")
-                            }
-                            NameTextBuilder {
-                                Text("имя")
-                            }
-                        }.listRowBackground(Color.clear)
-                    })
-            }.background(Color(.blue))
         
-        }
-    }
-}
-
-struct FriendsView_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendsView()
+        List(viewModel.friends) { friend in
+            
+            NavigationLink (destination: FriendProfileView(friend: friend),
+                            label: {
+                                FriendCell(friend: friend)
+                            })
+        }.onAppear(perform: viewModel.fetchFriends)
+//        .navigationBarTitle("Друзья", displayMode: .inline)
     }
 }
