@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "XCTest",
+        "repositoryURL": "https://github.com/apple/swift-corelibs-xctest.git",
+        "state": {
+          "branch": "main",
+          "revision": "56501e765303ccac2f104a6e45cfcd6e733cc74e",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
