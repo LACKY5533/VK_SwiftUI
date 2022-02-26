@@ -22,6 +22,7 @@ struct AvatarBuilder: View {
             .frame(width: 40, height: 40, alignment: .center)
             .clipShape(Circle())
             .modifier(CircleShadowModifier(colorShadow: .blue, radiusShadow: 3))
+            .modifier(AvatarAnimationModifier())
     }
 }
 

@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870EC7DF27CAEF920029A3B7 /* LikeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870EC7DE27CAEF920029A3B7 /* LikeViewModel.swift */; };
+		870EFB0927C647F500C2212D /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 870EFB0827C647F500C2212D /* QGrid */; };
+		870EFB0B27C6498D00C2212D /* LikeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870EFB0A27C6498D00C2212D /* LikeModel.swift */; };
+		870EFB0D27C64A4800C2212D /* MyDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870EFB0C27C64A4800C2212D /* MyDateFormatter.swift */; };
 		87171BEE27C17AA900F018E9 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87171BED27C17AA900F018E9 /* FriendCell.swift */; };
 		87171BF027C17ABD00F018E9 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87171BEF27C17ABD00F018E9 /* GroupCell.swift */; };
 		87171BF427C17BFC00F018E9 /* FriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87171BF327C17BFC00F018E9 /* FriendModel.swift */; };
 		871DA41F27B7C18600A66075 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871DA41E27B7C18600A66075 /* FriendsView.swift */; };
-		871DA42627B7C5EE00A66075 /* BuilderAvatarAndName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871DA42527B7C5EE00A66075 /* BuilderAvatarAndName.swift */; };
+		871DA42627B7C5EE00A66075 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871DA42527B7C5EE00A66075 /* ViewBuilder.swift */; };
 		871DA42827B7C76900A66075 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871DA42727B7C76900A66075 /* ViewModifier.swift */; };
 		871DA42A27B7D14100A66075 /* GroupsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871DA42927B7D14100A66075 /* GroupsView.swift */; };
 		872D13E327C3DD3000E4061C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 872D13E227C3DD3000E4061C /* Alamofire */; };
@@ -45,11 +49,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		870EC7DE27CAEF920029A3B7 /* LikeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeViewModel.swift; sourceTree = "<group>"; };
+		870EFB0A27C6498D00C2212D /* LikeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeModel.swift; sourceTree = "<group>"; };
+		870EFB0C27C64A4800C2212D /* MyDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDateFormatter.swift; sourceTree = "<group>"; };
 		87171BED27C17AA900F018E9 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		87171BEF27C17ABD00F018E9 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		87171BF327C17BFC00F018E9 /* FriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendModel.swift; sourceTree = "<group>"; };
 		871DA41E27B7C18600A66075 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
-		871DA42527B7C5EE00A66075 /* BuilderAvatarAndName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuilderAvatarAndName.swift; sourceTree = "<group>"; };
+		871DA42527B7C5EE00A66075 /* ViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilder.swift; sourceTree = "<group>"; };
 		871DA42727B7C76900A66075 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
 		871DA42927B7D14100A66075 /* GroupsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsView.swift; sourceTree = "<group>"; };
 		8741CE5A27B1442C00EF26BF /* VK_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +91,7 @@
 				87E9216627C26C7600FD42A9 /* RealmSwift in Frameworks */,
 				872D13E327C3DD3000E4061C /* Alamofire in Frameworks */,
 				87E9216427C26C7600FD42A9 /* Realm in Frameworks */,
+				870EFB0927C647F500C2212D /* QGrid in Frameworks */,
 				87E9214E27C24DEA00FD42A9 /* SwiftyJSON in Frameworks */,
 				87E9215127C24E5900FD42A9 /* Kingfisher in Frameworks */,
 				87E9215427C2590F00FD42A9 /* RealmCore in Frameworks */,
@@ -117,6 +125,7 @@
 				87171BF327C17BFC00F018E9 /* FriendModel.swift */,
 				87E9216F27C27DAA00FD42A9 /* GroupModel.swift */,
 				87E9217527C28ED900FD42A9 /* NewsModel.swift */,
+				870EFB0A27C6498D00C2212D /* LikeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,8 +152,9 @@
 		871DA42427B7C58800A66075 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				871DA42527B7C5EE00A66075 /* BuilderAvatarAndName.swift */,
+				871DA42527B7C5EE00A66075 /* ViewBuilder.swift */,
 				871DA42727B7C76900A66075 /* ViewModifier.swift */,
+				870EFB0C27C64A4800C2212D /* MyDateFormatter.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -246,6 +256,7 @@
 				87E9216B27C26FCA00FD42A9 /* FriendsViewModel.swift */,
 				87E9217127C2825E00FD42A9 /* GroupsViewModel.swift */,
 				87E9217A27C28FAA00FD42A9 /* NewsViewModel.swift */,
+				870EC7DE27CAEF920029A3B7 /* LikeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -283,6 +294,7 @@
 				87E9216327C26C7600FD42A9 /* Realm */,
 				87E9216527C26C7600FD42A9 /* RealmSwift */,
 				872D13E227C3DD3000E4061C /* Alamofire */,
+				870EFB0827C647F500C2212D /* QGrid */,
 			);
 			productName = VK_SwiftUI;
 			productReference = 8741CE5A27B1442C00EF26BF /* VK_SwiftUI.app */;
@@ -319,6 +331,7 @@
 				87E9215D27C25EF900FD42A9 /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 				87E9216227C26C7600FD42A9 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				872D13E127C3DD3000E4061C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				870EFB0727C647F400C2212D /* XCRemoteSwiftPackageReference "QGrid" */,
 			);
 			productRefGroup = 8741CE5B27B1442C00EF26BF /* Products */;
 			projectDirPath = "";
@@ -353,22 +366,25 @@
 				87171BEE27C17AA900F018E9 /* FriendCell.swift in Sources */,
 				871DA41F27B7C18600A66075 /* FriendsView.swift in Sources */,
 				8743C82527BD8CC100B80517 /* NewsView.swift in Sources */,
+				870EC7DF27CAEF920029A3B7 /* LikeViewModel.swift in Sources */,
 				87171BF027C17ABD00F018E9 /* GroupCell.swift in Sources */,
 				87E9215927C25D3100FD42A9 /* VKAuthWebView.swift in Sources */,
 				87E9215C27C25DFF00FD42A9 /* Account.swift in Sources */,
+				870EFB0D27C64A4800C2212D /* MyDateFormatter.swift in Sources */,
 				8743C82827BD91E200B80517 /* ContainerView.swift in Sources */,
 				87E9216C27C26FCA00FD42A9 /* FriendsViewModel.swift in Sources */,
 				87E9217B27C28FAA00FD42A9 /* NewsViewModel.swift in Sources */,
 				87E9217427C28E8400FD42A9 /* NewsAPI.swift in Sources */,
 				871DA42827B7C76900A66075 /* ViewModifier.swift in Sources */,
 				8743C82327BD898F00B80517 /* MainTabBarView.swift in Sources */,
+				870EFB0B27C6498D00C2212D /* LikeModel.swift in Sources */,
 				87E9216927C26D1100FD42A9 /* FriendsDB.swift in Sources */,
 				87171BF427C17BFC00F018E9 /* FriendModel.swift in Sources */,
 				87E9217227C2825E00FD42A9 /* GroupsViewModel.swift in Sources */,
 				8741CE6027B1442C00EF26BF /* LoginView.swift in Sources */,
 				8741CE5E27B1442C00EF26BF /* VK_SwiftUIApp.swift in Sources */,
 				871DA42A27B7D14100A66075 /* GroupsView.swift in Sources */,
-				871DA42627B7C5EE00A66075 /* BuilderAvatarAndName.swift in Sources */,
+				871DA42627B7C5EE00A66075 /* ViewBuilder.swift in Sources */,
 				87E9217927C28F5900FD42A9 /* NewsCell.swift in Sources */,
 				8743C82D27BD98F600B80517 /* FriendProfileView.swift in Sources */,
 			);
@@ -561,6 +577,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		870EFB0727C647F400C2212D /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Q-Mobile/QGrid.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
 		872D13E127C3DD3000E4061C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -620,6 +644,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		870EFB0827C647F500C2212D /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 870EFB0727C647F400C2212D /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
+		};
 		872D13E227C3DD3000E4061C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 872D13E127C3DD3000E4061C /* XCRemoteSwiftPackageReference "Alamofire" */;

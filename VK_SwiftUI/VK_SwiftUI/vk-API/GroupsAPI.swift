@@ -23,8 +23,9 @@ final class GroupsAPI {
         let parameters: Parameters = [
             "user_id": userId,
             "extended": 1,
-            "count": 10,
             "access_token": token,
+            "fields": "name, photo_100",
+            "count": 10,
             "v": version
         ]
         
@@ -33,10 +34,10 @@ final class GroupsAPI {
         AF.request(url, method: .get, parameters: parameters).responseJSON { response in
             
             guard let data = response.data else { return }
-            debugPrint(response.data as Any)
+            print(String(decoding: response.data!, as: UTF8.self))
             
             do {
-
+                
                 let GroupsJSON = try JSONDecoder().decode(GroupsJSON.self, from: data)
                 let mygroups: [GroupModel] = GroupsJSON.response.items
                 completion(mygroups)

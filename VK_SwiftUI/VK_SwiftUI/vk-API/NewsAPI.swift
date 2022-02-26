@@ -31,8 +31,6 @@ final class NewsAPI {
     
     func getNews(startTime: Int? = nil, startFrom: String? = nil, _ completion: @escaping (NewsJSON?) -> ()) {
         
-
-        
         let url = baseUrl + method
         
         if startTime != nil {
@@ -103,7 +101,39 @@ final class NewsAPI {
                 completion(feed)
             }
         }
-        
     }
+    
+    func addLike(type: String, ownerId: Int, itemId: Int) {
+            let likeMethod = "/likes.add"
+            let url = baseUrl + likeMethod
+            let session = Account.shared
+            let likeParams = [
+                "type": type,
+                "owner_id": String(ownerId),
+                "item_id": String(itemId),
+                "access_token": session.token,
+                "v": session.version
+            ]
+            AF.request(url, parameters: likeParams).responseData { response in
+                print(String(decoding: response.data!, as: UTF8.self))
+            }
+            
+        }
+        
+        func deleteLike(type: String, ownerId: Int, itemId: Int) {
+            let likeMethod = "/likes.delete"
+            let url = baseUrl + likeMethod
+            let session = Account.shared
+            let likeParams = [
+                "type": type,
+                "owner_id": String(ownerId),
+                "item_id": String(itemId),
+                "access_token": session.token,
+                "v": session.version
+            ]
+            AF.request(url, parameters: likeParams).responseData { response in
+                print(String(decoding: response.data!, as: UTF8.self))
+            }
+        }
     
 }

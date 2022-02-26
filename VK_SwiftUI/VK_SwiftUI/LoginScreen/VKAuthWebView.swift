@@ -34,6 +34,7 @@ struct VKAuthWebView: UIViewRepresentable {
             URLQueryItem(name: "scope", value: "262150"),
             URLQueryItem(name: "display", value: "mobile"),
             URLQueryItem(name: "redirect_uri", value: "https://oauth.vk.com/blank.html"),
+            URLQueryItem(name: "scope", value: "wall,friends,photos,video,stories,pages,status,notes,groups,stats"),
             URLQueryItem(name: "response_type", value: "token"),
             URLQueryItem(name: "v", value: "5.81")
         ]
@@ -75,6 +76,7 @@ class WebViewNavigationDelegate: NSObject, WKNavigationDelegate {
         
         Account.shared.token = token
         Account.shared.userId = Int(userIdString) ?? 0
+        Account.shared.isLoggedIn = true
         
         NotificationCenter.default.post(name: NSNotification.Name("vkTokenSaved"), object: self)
         
