@@ -24,6 +24,6 @@ struct FriendsView: View {
                                 FriendCell(friend: friend)
                             })
         }.onAppear(perform: viewModel.fetchFriends)
-//        .navigationBarTitle("Друзья", displayMode: .inline)
+//        .navigationTitle("Друзья")
     }
 }

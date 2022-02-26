@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct NewsView: View {
     
     @ObservedObject var viewModel: NewsViewModel
@@ -18,12 +16,11 @@ struct NewsView: View {
     }
     
     var body: some View {
-         
-        List(viewModel.newsItems) { news in
-                
-            NewsViewCell(newsItem: news)
-                
-            
-        }.onAppear(perform: viewModel.fetchNews)
+         Text("не работает")
+//        List(viewModel.newsFeed!) { news in
+//
+//            NewsCell(newsItem: news)
+//
+//        }.onAppear(perform: viewModel.fetchNews)
     }
 }

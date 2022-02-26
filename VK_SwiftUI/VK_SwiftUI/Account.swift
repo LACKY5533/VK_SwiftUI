@@ -8,7 +8,7 @@
 import UIKit
 import SwiftKeychainWrapper
 
-final class Account {
+final class Account: ObservableObject {
     
     private init() {}
     
@@ -30,6 +30,8 @@ final class Account {
             return UserDefaults.standard.integer(forKey:"userId")
         }
     }
+    
+    @Published var isLoggedIn: Bool = false
     
     let clientID = "8018451"
     let version = "5.81"

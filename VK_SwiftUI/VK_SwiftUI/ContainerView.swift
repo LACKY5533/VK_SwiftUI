@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContainerView: View {
     
-    @State private var shouldShowMainView: Bool = true
+    @ObservedObject var shouldShowMainView = Account.shared
     
     var body: some View {
         NavigationView {
@@ -17,7 +17,7 @@ struct ContainerView: View {
                 VKAuthWebView()
                 NavigationLink (
                     destination: MainTabBarView(),
-                    isActive: $shouldShowMainView){}
+                    isActive: $shouldShowMainView.isLoggedIn){}
             }
         }
     }
